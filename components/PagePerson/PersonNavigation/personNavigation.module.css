@@ -1,0 +1,145 @@
+
+@media (min-width: 730px) {
+  .nav{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    padding: 85px 0px 0px 15px;
+    height: 100vh;
+  }
+  .link{
+    z-index: 1;
+    font-size: 22px;
+    color: white;
+    padding: 5px;
+    transition-duration: 0.3s;
+    border-radius: 15px;
+  }
+  .link:hover{
+    transition-duration: 0.3s;
+    background-color: rgb(58, 56, 56);
+  }
+  .display{
+    z-index: 1;
+    font-size: 22px;
+    color: white;
+    padding: 5px;
+    transition-duration: 0.3s;
+    border-radius: 15px;
+  }
+  .display:hover{
+    transition-duration: 0.3s;
+    background-color: rgb(58, 56, 56);
+  }
+}
+
+@media (max-width: 730px) {
+  .nav{
+    position: absolute;
+    background-color: rgb(12, 12, 12);
+    top: 70px;
+    width: 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+    animation: nav 0.5s forwards;
+  }
+
+  .button{
+    display: block;
+    background-color: rgb(12, 12, 12);
+    margin: 10px 5px;
+    animation: button 0.5s forwards;
+    width: 30px;
+  }
+
+  .hr{
+    background-color: red;
+    width: 30px;
+    height: 3px;
+    margin-bottom: 7px;
+  }
+
+  .link{
+    margin: 5px;
+    z-index: 1;
+    font-size: 22px;
+    color: white;
+    padding: 5px;
+    transition-duration: 0.3s;
+    border-radius: 15px;
+    animation: LinkEffect 1.5s forwards;
+  }
+
+  .link:hover{
+    transition-duration: 0.3s;
+    background-color: rgb(58, 56, 56);
+  }
+
+  .navClick{
+    position: absolute;
+    animation: navEffect 0.5s forwards;
+    background-color: rgb(12, 12, 12);
+    top: 70px;
+    width: 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+    padding-right: 5px;
+  }
+  
+  .buttonClick {
+    display: block;
+    background-color: rgb(12, 12, 12);
+    margin: 10px 5px;
+    animation: buttonClick 0.5s forwards;
+    width: 30px;
+  }
+
+  .display{
+    display: none;
+  }
+}
+
+
+
+@keyframes LinkEffect{
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes buttonClick{
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes button{
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes nav{
+  0% {
+    width: 170px;
+  }
+  100% {
+    width: 40px;
+  }
+}
+
+@keyframes navEffect{
+  100% {
+    width: 170px;
+  }
+}
